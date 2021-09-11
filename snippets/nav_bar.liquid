@@ -1,0 +1,237 @@
+<div data-collapse="all" data-animation="default" data-duration="400" role="banner" class="navbar w-nav">
+    <div data-w-id="29e6eef2-6d76-f436-07ac-a7b5e9c5a2b6" class="cart-absolute">
+      <div data-node-type="commerce-cart-wrapper" class="w-commerce-commercecartwrapper absolute-center" data-wf-page-link-href-prefix="" data-wf-cart-duration="500" data-wf-cart-type="modal" data-open-product="" data-wf-cart-query="" data-wf-cart-easing="ease" udy-collection="cart">
+        <a href="#" data-node-type="commerce-cart-open-link" class="w-commerce-commercecartopenlink button-hamburger hide-custom-cursor w-inline-block">
+          <div class="w-commerce-commercecartopenlinkcount cart-quantity">{{ article.item_count }}</div>
+          <div class="hamburger-lines"><img src="https://uploads-ssl.webflow.com/5d820ccf1097dd2dccadc680/5d87847c8de89cd7fb9de138_Orion_shopping-basket.svg" alt="" class="icn-16"></div>
+        </a>
+        <div data-node-type="commerce-cart-container-wrapper" style="display:none" class="w-commerce-commercecartcontainerwrapper w-commerce-commercecartcontainerwrapper--cartType-modal">
+          <div data-node-type="commerce-cart-container" class="w-commerce-commercecartcontainer cart-container">
+            <div class="w-commerce-commercecartheader">
+              <h4 class="w-commerce-commercecartheading heading-4">{{ 'tn77ee8913' | t }}</h4>
+              <a href="#" data-node-type="commerce-cart-close-link" class="w-commerce-commercecartcloselink w-inline-block"><svg width="16px" height="16px" viewBox="0 0 16 16">
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g fill-rule="nonzero" fill="#333333">
+                      <polygon points="6.23223305 8 0.616116524 13.6161165 2.38388348 15.3838835 8 9.76776695 13.6161165 15.3838835 15.3838835 13.6161165 9.76776695 8 15.3838835 2.38388348 13.6161165 0.616116524 8 6.23223305 2.38388348 0.616116524 0.616116524 2.38388348 6.23223305 8"></polygon>
+                    </g>
+                  </g>
+                </svg></a>
+            </div>
+            <div class="w-commerce-commercecartformwrapper cart-form-wrapper">
+              <form data-node-type="commerce-cart-form" style="display:none" class="w-commerce-commercecartform">
+                <script type="text/x-wf-template" id="wf-template-29e6eef2-6d76-f436-07ac-a7b5e9c5a2c5"><div data-node-type="cart-item" class="cart-item w-commerce-commercecartitem" template-part-bind="29e6eef2-6d76-f436-07ac-a7b5e9c5a2c6"><img data-node-type="cart-item-image" src="<%= it.image %>" template-part-bind="29e6eef2-6d76-f436-07ac-a7b5e9c5a2c7" class="w-commerce-commercecartitemimage"><div data-node-type="cart-item-info" template-part-bind="29e6eef2-6d76-f436-07ac-a7b5e9c5a2c8" class="w-commerce-commercecartiteminfo"><div data-node-type="cart-product-name" template-part-bind="29e6eef2-6d76-f436-07ac-a7b5e9c5a2c9" class="w-commerce-commercecartproductname"><%= it.title %></div><ul class="w-commerce-commercecartoptionlist"><% Object.entries(it.properties).forEach( data =>  { %><li data-node-type="cart-option-list-item"><span data-node-type="cart-option-list-item-label"><%= data[0] %></span><span>: </span><span data-node-type="cart-option-list-item-value"><%= data[1] %></span></li><% }) %></ul><a data-node-type="cart-remove-link" href="#" template-part-bind="29e6eef2-6d76-f436-07ac-a7b5e9c5a2d1" data-product-id="<%= it.id %>"><div>Remove</div></a></div><input class="w-commerce-commercecartquantity" name="<%= it.id %>" type="number" min="0" min="1" value="<%= it.quantity %>" data-node-type="cart-quantity"></div></script>
+                <div class="w-commerce-commercecartlist" data-wf-collection="database.commerceOrder.userItems" data-wf-template-id="wf-template-29e6eef2-6d76-f436-07ac-a7b5e9c5a2c5"></div>
+                <div class="w-commerce-commercecartfooter cart-footer">
+                  <div class="w-commerce-commercecartlineitem">
+                    <div>{{ 'tn76f396dc' | t }}</div>
+                    <div class="w-commerce-commercecartordervalue">{{ article.items_subtotal_price | money }}</div>
+                  </div>
+                  <div>
+                    <div style="position:relative" data-wf-paypal-button="{&quot;layout&quot;:&quot;horizontal&quot;,&quot;color&quot;:&quot;black&quot;,&quot;shape&quot;:&quot;rect&quot;,&quot;label&quot;:&quot;paypal&quot;,&quot;tagline&quot;:false,&quot;note&quot;:false}">
+                      <div style="position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;z-index:999;cursor:auto"></div>
+                    </div>
+                    <div data-node-type="commerce-cart-quick-checkout-actions">{{ content_for_additional_checkout_buttons }}</div>
+                    <a href="/checkout" value="Continue to Checkout" data-node-type="cart-checkout-button" class="w-commerce-commercecartcheckoutbutton applepay-button" data-loading-text="Hang Tight...">{{ 'tn7941186e' | t }}</a>
+                  </div>
+                </div>
+              </form>
+              <div class="w-commerce-commercecartemptystate empty-state">
+                <div class="heading-3-subsection">{{ 'tnebaad36' | t }}</div>
+                <a href="#" data-w-id="29e6eef2-6d76-f436-07ac-a7b5e9c5a2e8" class="link-block-underline w-inline-block">
+                  <div class="heading-3-subsection text-underline">{{ 'tn10d1f534' | t }}</div>
+                  <div class="hover-line"></div>
+                </a>
+              </div>
+              <div style="display:none" data-node-type="commerce-cart-error" class="w-commerce-commercecarterrorstate">
+                <div class="w-cart-error-msg" data-w-cart-quantity-error="Product is not available in this quantity." data-w-cart-checkout-error="Checkout is disabled on this site." data-w-cart-general-error="Something went wrong when adding this item to the cart." data-w-cart-cart_order_min-error="Cart failed.">{{ 'tn1c765d0d' | t }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav role="navigation" class="navigation w-nav-menu">
+      <div class="shape-bottom-white"></div>
+      <div class="shape-bottom-dark"></div>
+      <div class="w-layout-grid grid-navigation">
+        <div class="navi-menu">
+          <div class="navi-heading-wrapper">
+            <div class="overflow-hidden">
+              <div class="show-navi-item hide-custom-cursor">
+                <a href="{{ pages["shop-all"].url }}" class="text-wrap w-inline-block">
+                  <h3 class="navi-heading">{{ 't35daf6' | t }}</h3>
+                  <h3 class="navi-heading hover">{{ 't274f16' | t }}</h3>
+                </a>
+              </div>
+            </div>
+            <div class="overflow-hidden">
+              <div class="show-navi-item hide-custom-cursor">
+                <a href="#" class="text-wrap w-inline-block">
+                  <h3 class="navi-heading">{{ 'tn3cedb36c' | t }}</h3>
+                  <h3 class="navi-heading hover">{{ 't4ba02cb4' | t }}</h3>
+                </a>
+              </div>
+            </div>
+            <div class="overflow-hidden">
+              <div class="show-navi-item hide-custom-cursor">
+                <a href="https://designer-portfolio-template.webflow.io/#about" class="text-wrap w-inline-block">
+                  <h3 class="navi-heading">{{ 't74843ad3' | t }}</h3>
+                  <h3 class="navi-heading hover">{{ 't6460e0b1' | t }}</h3>
+                </a>
+              </div>
+            </div>
+            <div class="overflow-hidden">
+              <div class="show-navi-item hide-custom-cursor">
+                <a href="https://designer-portfolio-template.webflow.io/#service" class="text-wrap w-inline-block">
+                  <h3 class="navi-heading"></h3>
+                  <h3 class="navi-heading hover">{{ 't560f747e' | t }}</h3>
+                </a>
+              </div>
+            </div>
+            <div class="overflow-hidden">
+              <div class="show-navi-item hide-custom-cursor">
+                <a href="{{ pages["projects"].url }}" class="text-wrap w-inline-block">
+                  <h3 class="navi-heading">{{ 't50c8e2f9' | t }}</h3>
+                  <h3 class="navi-heading hover">{{ 't50c8e2f9' | t }}</h3>
+                </a>
+              </div>
+            </div>
+            <div class="overflow-hidden">
+              <div class="show-navi-item hide-custom-cursor">
+                <a href="#" class="text-wrap w-inline-block">
+                  <h3 class="navi-heading">{{ 'tn64104400' | t }}</h3>
+                  <h3 class="navi-heading hover">{{ 'tn64104400' | t }}</h3>
+                </a>
+              </div>
+            </div>
+          </div>
+          <ul role="list" class="list-align-left w-list-unstyled">
+            <li>
+              <div class="overflow-hidden">
+                <div class="show-navi-item">
+                  <a href="#" data-w-id="29e6eef2-6d76-f436-07ac-a7b5e9c5a321" class="link-block-underline hide-custom-cursor w-inline-block">
+                    <div class="hover-line"></div>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="overflow-hidden">
+                <div class="show-navi-item">
+                  <a href="#" data-w-id="29e6eef2-6d76-f436-07ac-a7b5e9c5a326" class="link-block-underline hide-custom-cursor w-inline-block">
+                    <div class="hover-line"></div>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="navi-social">
+          <div class="caption-no-bottom-mobile overflow-hidden">
+            <div class="show-navi-item">
+              <div>{{ 'tn5ae7feb3' | t }}</div>
+            </div>
+          </div>
+          <div class="overflow-hidden">
+            <div class="show-navi-item padding">
+              <a data-w-id="29e6eef2-6d76-f436-07ac-a7b5e9c5a32f" href="https://www.instagram.com/" target="_blank" class="button social hide-custom-cursor w-inline-block">
+                <div class="button-hover black"></div><img src="https://uploads-ssl.webflow.com/5d820ccf1097dd2dccadc680/5d85e0c88de89c83168e71f8_instagram-white.svg" alt="" class="button-label-icon">
+              </a>
+            </div>
+          </div>
+          <div class="overflow-hidden">
+            <div class="show-navi-item padding">
+              <a data-w-id="29e6eef2-6d76-f436-07ac-a7b5e9c5a334" href="https://www.instagram.com/" target="_blank" class="button social hide-custom-cursor w-inline-block">
+                <div class="button-hover black"></div><img src="https://uploads-ssl.webflow.com/5d820ccf1097dd2dccadc680/5d85e204f0c5f301657e6091_facebook-white.svg" alt="" class="button-label-icon">
+              </a>
+            </div>
+          </div>
+          <div class="overflow-hidden">
+            <div class="show-navi-item padding">
+              <a data-w-id="29e6eef2-6d76-f436-07ac-a7b5e9c5a339" href="https://www.instagram.com/" target="_blank" class="button social hide-custom-cursor w-inline-block">
+                <div class="button-hover black"></div><img src="https://uploads-ssl.webflow.com/5d820ccf1097dd2dccadc680/5d85e227f0c5f3d1c67e60e4_twitter-white.svg" alt="" class="button-label-icon">
+              </a>
+            </div>
+          </div>
+          <div class="line-left-navi"></div>
+        </div>
+        <div class="instagram-navi-content">
+          <div class="line-left-navi"></div>
+          <div class="instagram-wrapper-navi">
+            <div class="instagram-item-navi">
+              <div class="show-navi-item hide-custom-cursor">
+                <a href="https://www.instagram.com/" target="_blank" class="trigger instagram w-inline-block"><img src="{{ 'pexels-polina-tankilevitch-4831639-1.jpg' | asset_url }}" sizes="100vw" srcset="{{ 'pexels-polina-tankilevitch-4831639-1-p-500.jpeg' | asset_url }} 500w, {{ 'pexels-polina-tankilevitch-4831639-1-p-800.jpeg' | asset_url }} 800w, {{ 'pexels-polina-tankilevitch-4831639-1.jpg' | asset_url }} 1000w" alt="">
+                  <div class="instagram-layer-navi">
+                    <div class="instagram-content-navi"><img src="https://uploads-ssl.webflow.com/5d820ccf1097dd2dccadc680/5d85e0c88de89c83168e71f8_instagram-white.svg" alt="" class="icn-32">
+                      <div>{{ 't14154f72' | t }}</div>
+                    </div>
+                  </div>
+                  <div class="instagram-hover"></div>
+                </a>
+              </div>
+            </div>
+            <div class="instagram-item-navi">
+              <div class="show-navi-item hide-custom-cursor">
+                <a href="https://www.instagram.com/" target="_blank" class="trigger instagram w-inline-block"><img src="{{ '1.png' | asset_url }}" sizes="100vw" srcset="{{ '1-p-500.png' | asset_url }} 500w, {{ '1-p-800.png' | asset_url }} 800w, {{ '1-p-1080.png' | asset_url }} 1080w, {{ '1.png' | asset_url }} 1200w" alt="">
+                  <div class="instagram-layer-navi">
+                    <div class="instagram-content-navi"><img src="https://uploads-ssl.webflow.com/5d820ccf1097dd2dccadc680/5d85e0c88de89c83168e71f8_instagram-white.svg" alt="" class="icn-32">
+                      <div>{{ 't14154f72' | t }}</div>
+                    </div>
+                  </div>
+                  <div class="instagram-hover"></div>
+                </a>
+              </div>
+            </div>
+            <div class="instagram-item-navi">
+              <div class="show-navi-item hide-custom-cursor">
+                <a href="https://www.instagram.com/" target="_blank" class="trigger instagram w-inline-block"><img src="{{ 'portrait.png' | asset_url }}" sizes="100vw" srcset="{{ 'portrait-p-500.png' | asset_url }} 500w, {{ 'portrait-p-800.png' | asset_url }} 800w, {{ 'portrait-p-1080.png' | asset_url }} 1080w, {{ 'portrait.png' | asset_url }} 1200w" alt="">
+                  <div class="instagram-layer-navi">
+                    <div class="instagram-content-navi"><img src="https://uploads-ssl.webflow.com/5d820ccf1097dd2dccadc680/5d85e0c88de89c83168e71f8_instagram-white.svg" alt="" class="icn-32">
+                      <div>{{ 't14154f72' | t }}</div>
+                    </div>
+                  </div>
+                  <div class="instagram-hover"></div>
+                </a>
+              </div>
+            </div>
+            <div class="instagram-item-navi">
+              <div class="show-navi-item hide-custom-cursor">
+                <a href="https://www.instagram.com/" target="_blank" class="trigger instagram w-inline-block"><img src="{{ 'portrait3.png' | asset_url }}" sizes="100vw" srcset="{{ 'portrait3-p-500.png' | asset_url }} 500w, {{ 'portrait3-p-800.png' | asset_url }} 800w, {{ 'portrait3-p-1080.png' | asset_url }} 1080w, {{ 'portrait3.png' | asset_url }} 1200w" alt="">
+                  <div class="instagram-layer-navi">
+                    <div class="instagram-content-navi"><img src="https://uploads-ssl.webflow.com/5d820ccf1097dd2dccadc680/5d85e0c88de89c83168e71f8_instagram-white.svg" alt="" class="icn-32">
+                      <div>{{ 't14154f72' | t }}</div>
+                    </div>
+                  </div>
+                  <div class="instagram-hover"></div>
+                </a>
+              </div>
+            </div>
+            <div class="instagram-item-navi">
+              <div class="show-navi-item hide-custom-cursor">
+                <a href="https://www.instagram.com/" target="_blank" class="trigger instagram w-inline-block"><img src="{{ 'portrait23jpg.png' | asset_url }}" sizes="100vw" srcset="{{ 'portrait23jpg-p-500.png' | asset_url }} 500w, {{ 'portrait23jpg-p-800.png' | asset_url }} 800w, {{ 'portrait23jpg-p-1080.png' | asset_url }} 1080w, {{ 'portrait23jpg.png' | asset_url }} 1200w" alt="">
+                  <div class="instagram-layer-navi">
+                    <div class="instagram-content-navi"><img src="https://uploads-ssl.webflow.com/5d820ccf1097dd2dccadc680/5d85e0c88de89c83168e71f8_instagram-white.svg" alt="" class="icn-32">
+                      <div>{{ 't14154f72' | t }}</div>
+                    </div>
+                  </div>
+                  <div class="instagram-hover"></div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="hamburger w-nav-button">
+      <div class="absolute-center">
+        <div class="button-hamburger hide-custom-cursor">
+          <div class="hamburger-lines">
+            <div class="close-top"></div>
+            <div class="close-bottom"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar-bg"></div>
+    <a href="{{ routes.root_url }}" class="brand w-inline-block"><img src="{{ 'logo.svg' | asset_url }}" loading="lazy" width="120" alt="" class="brand-image"></a>
+  </div>

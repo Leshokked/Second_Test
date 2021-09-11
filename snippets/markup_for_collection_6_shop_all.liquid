@@ -1,0 +1,20 @@
+{% capture listItems %}
+{% for item in collections[settings.collection_6_shop_all].products limit: settings.collection_6_shop_all_limit %}
+<div id="w-node-_1b567306-06c8-c295-1521-fc255bba8a08-b1411347" role="listitem" class="collection-list-item w-dyn-item">
+            <a href="{{ item.url | within: collection }}" class="product-card-image w-inline-block"><img src="{{ item.featured_image | img_url: 'master' }}" loading="lazy" alt="{{ item.featured_image.alt }}" class="back_image" data-commerce-type="variation-image" srcset="{{ item.featured_image | img_url: '1920x' }} 1920w,{{ item.featured_image | img_url: '1600x' }} 1600w,{{ item.featured_image | img_url: '1366x' }} 1366w,{{ item.featured_image | img_url: '1024x' }} 1024w,{{ item.featured_image | img_url: '768x' }} 768w,{{ item.featured_image | img_url: '640x' }} 640w"><img src="{{ item.featured_image | img_url: 'master' }}" loading="lazy" alt="{{ item.featured_image.alt }}" class="front_image" data-commerce-type="variation-image" srcset="{{ item.featured_image | img_url: '1920x' }} 1920w,{{ item.featured_image | img_url: '1600x' }} 1600w,{{ item.featured_image | img_url: '1366x' }} 1366w,{{ item.featured_image | img_url: '1024x' }} 1024w,{{ item.featured_image | img_url: '768x' }} 768w,{{ item.featured_image | img_url: '640x' }} 640w"></a>
+            <div class="product-info">
+              <h5 class="heading-2">{{ item.title }}</h5>
+              <div data-commerce-type="variation-price" class="text-block-25">{{ item.price | money }}</div>
+            </div>
+          </div>
+{%- endfor -%}
+{% endcapture %}
+{% assign items_length = listItems | strip | size %}
+<div class="product-wrapper-3 _3-up w-dyn-list" udy-collection="product">
+        {%- unless items_length == 0 -%}<div role="list" class="collection-list-10 w-dyn-items">
+          {{ listItems }}
+        </div>{%- endunless -%}
+        {%- if items_length == 0 -%}<div class="w-dyn-empty">
+          <div>No items found.</div>
+        </div>{%- endif -%}
+      </div>

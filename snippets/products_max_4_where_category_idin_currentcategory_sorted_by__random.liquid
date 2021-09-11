@@ -1,0 +1,26 @@
+{% capture listItems %}
+{%- assign allItems = collections.all.products -%}
+{%- assign count = 0 -%}                    
+{%- for item in allItems -%}
+    {% if count == 4 %}{% break %}
+{% endif %}{% assign refs = item.collections | map: "handle" %}{% assign condition_0 = false %}                  
+{% if refs contains "DYN_CONTEXT.category" %}
+    {% assign condition_0 = true %}
+{% endif %}{% if condition_0 %}
+{% assign count = count | plus: 1 %}
+ <div role="listitem" class="w-dyn-item">
+              <a href="{{ item.url | within: collection }}" class="product-wrapper w-inline-block"><img src="{{ item.featured_image | img_url: 'master' }}" loading="lazy" alt="{{ item.featured_image.alt }}" class="image-19" data-commerce-type="variation-image" srcset="{{ item.featured_image | img_url: '1920x' }} 1920w,{{ item.featured_image | img_url: '1600x' }} 1600w,{{ item.featured_image | img_url: '1366x' }} 1366w,{{ item.featured_image | img_url: '1024x' }} 1024w,{{ item.featured_image | img_url: '768x' }} 768w,{{ item.featured_image | img_url: '640x' }} 640w"></a>
+            </div>
+{% endif %}
+{%- endfor -%}
+{% endcapture %}
+{% assign items_length = listItems | strip | size %}
+
+<div class="w-dyn-list" udy-collection="product">
+          {%- unless items_length == 0 -%}<div role="list" class="collection-list-6 w-dyn-items">
+            {{ listItems }}
+          </div>{%- endunless -%}
+          {%- if items_length == 0 -%}<div class="w-dyn-empty">
+            <div>No items found.</div>
+          </div>{%- endif -%}
+        </div>

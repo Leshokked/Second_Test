@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html data-wf-page="{{ wfPage }}" data-wf-site="612befc31d22d52c6187b810" lang="{{ request.locale.iso_code }}" data-money-format="{{ shop.money_format | escape }}"><head>{%- liquid
+    if headerSnippetPath
+        include headerSnippetPath
+    else
+        render "__default-head"
+    endif
+-%}
+{{content_for_header}}
+</head>
+<body class="{{ bodyClasses }} {{ "template-" | append: request.page_type | handle }}">
+{% if headerSnippetPath %}
+    {{ content_for_layout }}
+{% else %}
+    {% include "backup-layout" %}
+{% endif %}
+</body></html>
